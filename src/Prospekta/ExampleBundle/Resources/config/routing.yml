@@ -1,0 +1,12 @@
+# routes for testing purposes only -> to be removed in real application
+prospekta_file_test_add:
+    pattern:  /test/add
+    defaults: { _controller: ProspektaExampleBundle:Default:add }
+
+prospekta_file_test_update:
+    pattern:  /test/update/{handle}
+    defaults: { _controller: ProspektaExampleBundle:Default:update }
+
+prospekta_file_test_get:
+    pattern:  /test/get/{handle}
+    defaults: { _controller: ProspektaExampleBundle:Default:get }

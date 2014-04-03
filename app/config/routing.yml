@@ -1,0 +1,8 @@
+prospekta_example:
+    resource: "@ProspektaExampleBundle/Resources/config/routing.yml"
+    prefix:   /
+
+prospekta_filebundle:
+    resource: "@ProspektaFileBundle/Resources/config/routing.yml"
+    prefix:   /
+

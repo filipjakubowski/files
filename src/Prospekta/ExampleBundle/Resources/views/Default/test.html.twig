@@ -1,0 +1,11 @@
+<html>
+    <body>
+
+        {{ file | fileurl }}
+        <img src="{{ file | fileurl}}" />
+
+        {{ file | thumbnail(100,100) }}
+        <img src="{{ file | thumbnail(100,100) }}" />
+        
+    </body>
+</html>

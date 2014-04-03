@@ -1,0 +1,7 @@
+parameters:
+#    prospekta_example.example.class: Prospekta\ExampleBundle\Example
+
+services:
+#    prospekta_example.example:
+#        class: %prospekta_example.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

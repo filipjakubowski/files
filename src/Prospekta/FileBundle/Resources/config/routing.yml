@@ -1,0 +1,8 @@
+prospekta_file_getthumbnail:
+    pattern: /get_file/{handle}/thumb/{x}/{y}
+    defaults: { _controller: ProspektaFileBundle:Default:getThumbnail }
+
+prospekta_file_getfile:
+    pattern: /get_file/{handle}
+    defaults: { _controller: ProspektaFileBundle:Default:getFile }
+    

@@ -1,0 +1,27 @@
+parameters:
+#    prospekta_file.example.class: Prospekta\FileBundle\Example
+
+services:
+    prospekta_file.filesaver.prePersist.listener:
+        class: Prospekta\FileBundle\EventListener\FileSaver
+        tags:
+            - { name: doctrine.event_listener, event: prePersist }
+        arguments:
+            ["@prospekta_file.storage_manager"]
+            
+    prospekta_file.filesaver.preUpdate.listener:
+        class: Prospekta\FileBundle\EventListener\FileSaver
+        tags:
+            - { name: doctrine.event_listener, event: preUpdate }
+        arguments:
+            ["@prospekta_file.storage_manager"]
+            
+    prospekta_file.storage_manager:
+        class: Prospekta\FileBundle\Service\StorageManager
+        arguments: ["%prospekta_file.storageEngine%", "@service_container"]
+        
+    prospekta_file.twig.fileurl:
+        class: Prospekta\FileBundle\Twig\FileUrlExtension
+        tags:
+            - { name: twig.extension }
+        arguments: ["@prospekta_file.storage_manager"]
