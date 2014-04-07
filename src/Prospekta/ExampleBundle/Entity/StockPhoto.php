@@ -76,4 +76,60 @@ class StockPhoto extends \Prospekta\FileBundle\Entity\ImageFile
     {
         return $this->author;
     }
+    /**
+     * @var integer
+     */
+    protected $size;
+
+    /**
+     * @var string
+     */
+    protected $mimetype;
+
+
+    /**
+     * Set size
+     *
+     * @param integer $size
+     * @return StockPhoto
+     */
+    public function setSize($size)
+    {
+        $this->size = $size;
+    
+        return $this;
+    }
+
+    /**
+     * Get size
+     *
+     * @return integer 
+     */
+    public function getSize()
+    {
+        return $this->size;
+    }
+
+    /**
+     * Set mimetype
+     *
+     * @param string $mimetype
+     * @return StockPhoto
+     */
+    public function setMimetype($mimetype)
+    {
+        $this->mimetype = $mimetype;
+    
+        return $this;
+    }
+
+    /**
+     * Get mimetype
+     *
+     * @return string 
+     */
+    public function getMimetype()
+    {
+        return $this->mimetype;
+    }
 }

@@ -51,14 +51,14 @@ class File
      *
      * @ORM\Column(name="size", type="integer", nullable=false)
      */
-    protected $size;
+    private $size;
     
     /**
      * @var mimetype
      *
      * @ORM\Column(name="mimetype", type="string", length=255, nullable=true)
      */
-    protected $mimetype;
+    private $mimetype;
     
     /**
      *
@@ -163,5 +163,51 @@ class File
     public function getFilehandle()
     {
         return $this->filehandle;
+    }
+
+    /**
+     * Set size
+     *
+     * @param integer $size
+     * @return File
+     */
+    public function setSize($size)
+    {
+        $this->size = $size;
+    
+        return $this;
+    }
+
+    /**
+     * Get size
+     *
+     * @return integer 
+     */
+    public function getSize()
+    {
+        return $this->size;
+    }
+
+    /**
+     * Set mimetype
+     *
+     * @param string $mimetype
+     * @return File
+     */
+    public function setMimetype($mimetype)
+    {
+        $this->mimetype = $mimetype;
+    
+        return $this;
+    }
+
+    /**
+     * Get mimetype
+     *
+     * @return string 
+     */
+    public function getMimetype()
+    {
+        return $this->mimetype;
     }
 }
