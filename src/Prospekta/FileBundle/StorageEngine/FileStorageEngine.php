@@ -105,6 +105,12 @@ class FileStorageEngine extends StorageEngine
         
         $thumbnailFileName = $x . '.' . $y . '.' . $file->getFilehandle();
         $originalFile = $this->getLocalPath($file);
+
+		//if not image we cannot resize (temp solution)
+		if(!exif_imagetype($originalFile))
+        {
+            return;
+        }
         
         $image = new \Imagick($originalFile);
         $image->cropThumbnailImage($x, $y);
